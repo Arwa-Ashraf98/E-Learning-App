@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DoctorControlActivity">
+
+    <ImageView
+        android:id="@+id/imgViewDoctorControlPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/navy2"
+        android:src="@drawable/control"
+        app:layout_constraintBottom_toBottomOf="@id/doctorPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toEndOf="@id/doctorPage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.20" />
+
+    <ImageView
+        android:id="@+id/imgAttendance"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:src="@drawable/attendance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctorPage" />
+
+    <ImageView
+        android:id="@+id/imgQuiz"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:src="@drawable/quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctorPage" />
+
+    <ImageView
+        android:id="@+id/imgUpload"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/upload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOpenAttendance" />
+
+    <ImageView
+        android:id="@+id/imgGrade"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:src="@drawable/grades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOpenQuiz" />
+
+    <ImageView
+        android:id="@+id/img_chat"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:src="@drawable/chat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOpenGrade" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="3.7"
+        app:layout_constraintEnd_toStartOf="@id/imgQuiz"
+        app:layout_constraintStart_toEndOf="@id/imgAttendance"
+        app:layout_constraintTop_toBottomOf="@id/doctorPage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="3.7"
+        app:layout_constraintEnd_toStartOf="@id/imgQuiz"
+        app:layout_constraintStart_toEndOf="@id/imgAttendance"
+        app:layout_constraintTop_toBottomOf="@id/doctorPage" />
+
+    <TextView
+        android:id="@+id/doctorPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/navy2"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="@string/doctor_control_page"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <TextView
+        android:id="@+id/attendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/attendance"
+        android:textAllCaps="true"
+        android:textColor="@color/miniTitle"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@id/imgAttendance"
+        app:layout_constraintStart_toStartOf="@id/imgAttendance"
+        app:layout_constraintTop_toBottomOf="@id/imgAttendance" />
+
+    <TextView
+        android:id="@+id/quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:text="@string/quiz"
+        android:textAllCaps="true"
+        android:textColor="@color/miniTitle"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@id/imgQuiz"
+        app:layout_constraintStart_toStartOf="@id/imgQuiz"
+        app:layout_constraintTop_toBottomOf="@id/imgQuiz" />
+
+    <TextView
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/upload_materials"
+        android:textAllCaps="true"
+        android:textColor="@color/miniTitle"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@id/imgUpload"
+        app:layout_constraintStart_toStartOf="@id/imgUpload"
+        app:layout_constraintTop_toBottomOf="@id/imgUpload" />
+
+    <TextView
+        android:id="@+id/grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:text="Grades"
+        android:textAllCaps="true"
+        android:textColor="@color/miniTitle"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@id/imgGrade"
+        app:layout_constraintStart_toStartOf="@id/imgGrade"
+        app:layout_constraintTop_toBottomOf="@id/imgGrade" />
+
+    <TextView
+        android:id="@+id/text_courseId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/edit_text_login_background"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10sdp"
+        android:textColor="@color/whiteTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOpenUpload"
+        app:layout_constraintWidth_percent="0.60" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpenAttendance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@color/whiteBodyColor"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/open"
+        android:textColor="@color/miniTitle"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@id/attendance"
+        app:layout_constraintStart_toStartOf="@id/attendance"
+        app:layout_constraintTop_toBottomOf="@id/attendance"
+        app:strokeColor="@color/navy2"
+        app:strokeWidth="@dimen/_1sdp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpenQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@color/whiteBodyColor"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/open"
+        android:textColor="@color/miniTitle"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@id/quiz"
+        app:layout_constraintStart_toStartOf="@id/quiz"
+        app:layout_constraintTop_toBottomOf="@id/quiz"
+        app:strokeColor="@color/navy2"
+        app:strokeWidth="@dimen/_1sdp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpenUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@color/whiteBodyColor"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/open"
+        android:textColor="@color/miniTitle"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@id/upload"
+        app:layout_constraintStart_toStartOf="@id/upload"
+        app:layout_constraintTop_toBottomOf="@id/upload"
+        app:strokeColor="@color/navy2"
+        app:strokeWidth="@dimen/_1sdp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOpenGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@color/whiteBodyColor"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/open"
+        android:textColor="@color/miniTitle"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@id/grade"
+        app:layout_constraintStart_toStartOf="@id/grade"
+        app:layout_constraintTop_toTopOf="@id/btnOpenUpload"
+        app:strokeColor="@color/navy2"
+        app:strokeWidth="@dimen/_1sdp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

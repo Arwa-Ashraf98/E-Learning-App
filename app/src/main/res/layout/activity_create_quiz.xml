@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkerWhite"
+    tools:context=".ui.CreateQuizActivity">
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_choose1"
+        app:layout_constraintStart_toEndOf="@id/edit_choose1"
+        app:layout_constraintTop_toTopOf="@id/edit_choose1"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_choose2"
+        app:layout_constraintStart_toEndOf="@id/edit_choose2"
+        app:layout_constraintTop_toTopOf="@id/edit_choose2"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_choose3"
+        app:layout_constraintStart_toEndOf="@id/edit_choose3"
+        app:layout_constraintTop_toTopOf="@id/edit_choose3"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="@id/edit_choose4"
+        app:layout_constraintStart_toEndOf="@id/edit_choose4"
+        app:layout_constraintTop_toTopOf="@id/edit_choose4"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <EditText
+        android:id="@+id/edit_createQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:autofillHints="text"
+        android:background="@drawable/edit_create_mcq_background"
+        android:hint="@string/create_the_question"
+        android:inputType="textMultiLine"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:textColor="@color/darkTextColor"
+        android:textColorHint="@color/hashGrey"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/createMCQ" />
+
+    <EditText
+        android:id="@+id/edit_choose1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:autofillHints="name"
+        android:background="@drawable/edit_create_mcq_background"
+        android:inputType="text"
+        android:paddingVertical="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="@id/createMCQ"
+        app:layout_constraintTop_toBottomOf="@id/edit_createQuestion"
+        app:layout_constraintWidth_percent="0.60" />
+
+    <EditText
+        android:id="@+id/edit_choose2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:autofillHints="name"
+        android:background="@drawable/edit_create_mcq_background"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingVertical="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="@id/createMCQ"
+        app:layout_constraintTop_toBottomOf="@id/edit_choose1"
+        app:layout_constraintWidth_percent="0.60" />
+
+    <EditText
+        android:id="@+id/edit_choose3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:autofillHints="name"
+        android:background="@drawable/edit_create_mcq_background"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingVertical="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="@id/createMCQ"
+        app:layout_constraintTop_toBottomOf="@id/edit_choose2"
+        app:layout_constraintWidth_percent="0.60" />
+
+    <EditText
+        android:id="@+id/edit_choose4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:autofillHints="name"
+        android:background="@drawable/edit_create_mcq_background"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingVertical="@dimen/_7sdp"
+        app:layout_constraintStart_toStartOf="@id/createMCQ"
+        app:layout_constraintTop_toBottomOf="@id/edit_choose3"
+        app:layout_constraintWidth_percent="0.60" />
+
+    <TextView
+        android:id="@+id/createMCQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:text="@string/create_mcq_assignment"
+        android:textColor="@color/frutorial_title"
+        android:textSize="@dimen/_25sdp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/next_question"
+        android:textColor="@color/frutorial_title"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btn_next_question"
+        app:layout_constraintStart_toStartOf="@id/btn_next_question"
+        app:layout_constraintTop_toBottomOf="@id/btn_next_question" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:backgroundTint="@color/blue"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/upload_the_assignment"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/next"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btn_next_question"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:src="@drawable/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_choose4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
